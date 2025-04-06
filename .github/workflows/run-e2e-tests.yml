@@ -18,7 +18,7 @@ jobs:
         env:
           POSTGRESQL_USERNAME: docker
           POSTGRESQL_PASSWORD: docker
-          POSTGRESQL_DATABASE: fitwayapi
+          POSTGRESQL_DATABASE: findafrienddb
         options: >-
           --health-cmd="pg_isready -U docker"
           --health-interval=10s
@@ -38,4 +38,4 @@ jobs:
       - run: npm run test:e2e
         env:
           JWT_SECRET: testing
-          DATABASE_URL: "postgresql://docker:docker@localhost:5432/fitwayapi?schema=public"
+          DATABASE_URL: "postgresql://docker:docker@localhost:5432/findafrienddb?schema=public"
